@@ -42,7 +42,7 @@ export default function Movies() {
   async function fetchMovies(value, pageNo) {
     setLoading(true);
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?apikey=6f07cddd&s=${value}&page=${pageNo}`
+      `https://www.omdbapi.com/?apikey=6f07cddd&s=${value}&page=${pageNo}`
     );
     setMovies(data.Search);
     setLoading(false);
